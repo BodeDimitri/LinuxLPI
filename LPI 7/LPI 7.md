@@ -109,8 +109,24 @@ ls -la | less
 
 - aceitam  **,** ou **-** 
 
-- --output-delimiter="{delimitador}" coloca um delimitador
+- --output-delimiter="{delimitador}" coloca um delimitador escolhido pelo usuário. 
 
 ```shell
 cut -c 1-4,15-20 --output-delimiter="," notasfiscais.txt
 ```
+
+- -f {número do campo}corta por campos.
+
+- -d{separador no texto} se refere ao que vai separar o texto.
+
+```shell
+cut -f 1,5 -d: /etc/passwd
+```
+
+**Paste** Basicamente o copia e cola, ta no nome. 
+
+```shell
+paste {arquivo1} {arquivo2}
+```
+
+- -s cola na vertical
