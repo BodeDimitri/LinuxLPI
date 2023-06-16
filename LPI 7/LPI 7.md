@@ -96,3 +96,9 @@ zip -@ logs.zip < arquivscompactar.txt
 ```
 
 *Todos os arquivos a serem zippados estão sendo informados no arquivscompactar.txt*
+
+**|** Pipe serve para usar a saída de um comando e usar como parâmetro no próximo comando.
+
+```shell
+ls -la | less
+```
