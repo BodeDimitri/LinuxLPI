@@ -102,3 +102,15 @@ zip -@ logs.zip < arquivscompactar.txt
 ```shell
 ls -la | less
 ```
+
+**cut** serve para cortar uma parte do texto. *começa na posição 1*
+
+- -c especifica as colunas.
+
+- aceitam  **,** ou **-** 
+
+- --output-delimiter="{delimitador}" coloca um delimitador
+
+```shell
+cut -c 1-4,15-20 --output-delimiter="," notasfiscais.txt
+```
