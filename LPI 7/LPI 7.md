@@ -130,3 +130,81 @@ paste {arquivo1} {arquivo2}
 ```
 
 - -s cola na vertical
+
+**sort** serve para organizar uma lista ou um texto em sequência.
+
+```shell
+sort {arquivo1}
+```
+
+E precedência que vai ser seguida para ordenar o sort seguir a seguinte:
+
+1. $LC_ALL
+
+2. $LC_COLLATE
+
+3. $LANG
+
+(Se não tiver uma variável setada ele vai se basear na tabela ASCII.)
+
+- -r inverte a sequencia.
+
+- -t{delimitador} escolhe um delimitador para o texto.
+
+- -k{campo/field} para escolher o campo que vai se basear para organizar.
+
+- -u retira os campos que são repetidos.
+
+- -o e basicamente o >.
+
+```bash
+$ cut -c 1-4,5-14,15-20 --output-delimiter=: notasfiscais.posicional | sort -k 2 -t: -o notasfiscais.posicional
+```
+
+**uniq** tira as linhas repetidas que estão em sequencia. 
+
+```bash
+uniq {arquivo}
+```
+
+**grep** encontra palavras em um arquivo.
+
+```bash
+grep {palavra a ser procurada} {arquivo}
+```
+
+- -n informa a linha.
+
+- -c retorna diretamente a quantidade de vezes que e mostrada  a palavra em questão.
+
+- -i para ignorar se e maiúsculo ou minúsculo.
+  
+  *GREP OPTIONS não e usado mais* 
+
+Lembrando que gloobings tambem são usados no grep.
+
+- **.** significa qualquer coisa.
+
+- \* zero  ou mais aparições do ultimo elemento. 
+
+- **[]** são usados como range. Não esquecer de usar aspas **''** pois pode ocorrer um erro na interpretação  
+
+```bash
+grep '201[56]' post-do-blog.txt
+```
+
++ \+ uma ou mais aparições do ultimo elemento. Não esqueça de usar a barra invertida \.
+
++ ? torna o caractere opcional .
+
+```bash
+grep '[[:digit:]]\+,\?,[[:digit:]]\+'
+```
+
+A interrogação esta tornando a virgula opcional.
+
+
+
+- \\{caractere} para ele funcionar da maneira que não e esperada. Exemplo: Se você for usar um . sem o sentindo de significar qualquer coisa você usa um \.
+
+- -v serve para inverter o resultado, 
