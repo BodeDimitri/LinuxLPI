@@ -175,7 +175,7 @@ grep {palavra a ser procurada} {arquivo}
 
 - -n informa a linha.
 
-- -c retorna diretamente a quantidade de vezes que e mostrada  a palavra em questão.
+- -c retorna a quantidade de número de linhas que possuem ocorrências. 
 
 - -i para ignorar se e maiúsculo ou minúsculo.
   
@@ -203,8 +203,16 @@ grep '[[:digit:]]\+,\?,[[:digit:]]\+'
 
 A interrogação esta tornando a virgula opcional.
 
+- \\{caractere} para ele funcionar da maneira que não e esperada. Exemplo: Se você for usar um . sem o sentindo de significar qualquer coisa você usa um\.
 
+- -v serve para inverter o resultado.
 
-- \\{caractere} para ele funcionar da maneira que não e esperada. Exemplo: Se você for usar um . sem o sentindo de significar qualquer coisa você usa um \.
+- -l retorna apenas os arquivos que foram encontrado a busca desejável. 
 
-- -v serve para inverter o resultado, 
+- -r procura no diretório atual e nos diretórios filhos.
+
+Você pode usar dois greps com um | para pesquisar por mais palavras ou dígitos no meio do arquivo.
+
+```bash
+grep SQL mysql.txt | grep -c '[[:digit:]]'
+```
