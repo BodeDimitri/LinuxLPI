@@ -220,5 +220,3 @@ Nesse caso ele vai iterar pelos argumentos que foram passados.
 > Obrigado sheel tips por esse resumo incrível 
 
 Detalhe que quando você for conectar a um computador remoto e aconselhável preferir uma interface sem gráfico pois nem sempre o sistema operacional do outro computador vai ter interface gráfica.  
-
-
