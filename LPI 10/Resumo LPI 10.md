@@ -41,4 +41,17 @@
 - /var/log - Registra informações sobre mensagens do sistema.
 - /tmp - Pasta para arquivos temporários.
 **syslogd** - Serve para enviar mensagens de log para uma central onde ficam armazenados.
+---
+**ps** - Mostra todos os processos que estão em execução no bash.
+- ps -e - Mostra todos os processos do computador.
+- ps -ef - Mostra todos os processos e mais informações. (Traz o usuario e que horas o processo foi executado.)
+- ps -f {PPID} - Mostra mais informações sobre o PPID em questão.
+- ps l {PPID} - Mais informações ainda.
+**kill** - Se você colocar o PID do processo em questão ele matara o processo.
+Todo PID tem o seu "pai" PPID e mais "pais" tem mais processos filhos.
+**CTRL + Z** - Para o processo.
+**fg** - De foreground funciona para tirar o processo do modo pausa.
+Processo zombi e quando o "pai" de um processo morre mas o filho continua funcionando.
+**top** - Informação sobre o uso do CPU, informação relacionadas a CPU, uso de memoria e informação sobre processos ou programas que estão rodando. Se precisar de ajuda e só apertar "z" ou "?".
+**top -p {PPID}** - Mostra um processo em especifico. 
 - 
